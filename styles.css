@@ -11,12 +11,13 @@ h1 {
   font-size: 50px;
   font-family: fantasy;
 }
-.higherButton,
-.lowerButton,
-.againButton,
-.nextCard {
+.higher-button,
+.lower-button,
+.again-button,
+.first-card,
+.next-card {
   background-color: #e1ecf4;
-  border-radius: 3px;
+  border-radius: 10px;
   border: 1px solid #7aa7c7;
   box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
   box-sizing: border-box;
@@ -28,7 +29,7 @@ h1 {
   font-size: 13px;
   font-weight: 400;
   line-height: 1.15385;
-  margin: 0;
+  margin: auto;
   outline: none;
   padding: 8px 0.8em;
   position: relative;
@@ -52,10 +53,17 @@ h1 {
 }
 
 .card {
+  background-color: white;
   margin: auto;
   padding: 72px;
+  border-radius: 20px;
 }
 .second-card {
+  background-color: white;
   margin: auto;
-  padding: 61px;
+  padding: 72px;
+  border-radius: 20px;
+}
+.spacer {
+  padding: 100px;
 }

@@ -56,7 +56,7 @@ const first = document.querySelector(".card");
 const second = document.querySelector(".second-card");
 const nextCard = document.querySelector(".next-card");
 const higher = document.querySelector(".higher-button");
-const lower = document.querySelector(".higher-button");
+const lower = document.querySelector(".lower-button");
 const again = document.querySelector(".play-again");
 
 const getRandomCard = () => {
@@ -67,14 +67,23 @@ const getRandomCard = () => {
     return previousCard.value;
   });
 };
-
-const getNextCard = () => {
-  second.addEventListener("click", (event) => {
+const nextCardHigher = () => {
+  higher.addEventListener("click", (event) => {
     randomCard = deck[Math.floor(Math.random() * deck.length)];
     previousCard = randomCard;
-    first.textContent = previousCard.value;
+    second.textContent = previousCard.value;
     return previousCard.value;
   });
 };
+const nextCardLower = () => {
+  lower.addEventListener("click", (event) => {
+    randomCard = deck[Math.floor(Math.random() * deck.length)];
+    previousCard = randomCard;
+    second.textContent = previousCard.value;
+    return previousCard.value;
+  });
+};
+
 getRandomCard();
-getNextCard();
+nextCardHigher();
+nextCardLower();
